@@ -1,3 +1,6 @@
+![SkyLine](public/images/SkyLine.png)
+Format: ![Denver City Skyline]
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
