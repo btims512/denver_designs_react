@@ -1,4 +1,4 @@
-![SkyLine](public/images/SkyLine.png)
+![SkyLine](src/images/SkyLine.png)
 Format: ![Denver City Skyline]
 
 # Getting Started with Create React App
