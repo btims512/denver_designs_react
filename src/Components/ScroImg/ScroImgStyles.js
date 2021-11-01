@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ScroImgStyles = styled.div`
+const ScroImgStyles = styled.div`
   * {
     padding: 0;
     margin: 0;
@@ -31,7 +31,7 @@ export const ScroImgStyles = styled.div`
   }
   .fs {
     z-index: 5;
-    background: url("https://images.pexels.com/photos/2088167/pexels-photo-2088167.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background: url("https://images.unsplash.com/photo-1553969732-9cb8664f822f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1376&q=80");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,7 +39,7 @@ export const ScroImgStyles = styled.div`
   .sc {
     background-color: yellow;
     z-index: 4;
-    background: url("https://images.pexels.com/photos/931018/pexels-photo-931018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background: url("https://images.unsplash.com/photo-1620248742445-ce3a0de4b2b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2936&q=80");
     background-size: cover;
     background-position: 0% 70%;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@ export const ScroImgStyles = styled.div`
   .th {
     background-color: green;
     z-index: 3;
-    background: url("https://images.pexels.com/photos/3551227/pexels-photo-3551227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background: url("https://images.unsplash.com/photo-1616473515087-d3ad3fe87a24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80");
     background-size: cover;
     background-position: 0% 70%;
     background-repeat: no-repeat;
@@ -61,7 +61,7 @@ export const ScroImgStyles = styled.div`
   .fr {
     background-color: red;
     z-index: 2;
-    background: url("https://images.pexels.com/photos/6775273/pexels-photo-6775273.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background: url("https://images.unsplash.com/photo-1607570415631-5279aa4e5252?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1376&q=80");
     background-size: cover;
     background-position: 0% 30%;
     background-repeat: no-repeat;

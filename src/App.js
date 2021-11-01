@@ -14,7 +14,6 @@ function App() {
       <HeaderLogo />
       <SkyLine />
       <ScroImg />
-      <ScrolMag />
     </div>
   );
 }

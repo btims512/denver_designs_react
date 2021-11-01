@@ -1,141 +1,69 @@
-import * as React from "https://cdn.skypack.dev/react@17.0.1";
 import "/Users/Ben/Desktop/project_files/denver_designs_react/src/Components/ScrolMag/ScrolMagStyles.scss";
+import { useRef } from "react";
+import "./ScrolMagStyles.scss";
+
+// const heroTitle = hero.querySelector("h1");
+
+// Y value at which trailer switches to absolute positioning and scrolls up
 
 const ScrolMag = () => {
-  var windowSize = $(window).width();
+  // const threshold = window.innerHeight;
 
-  $(window).resize(function () {
-    windowSize = $(window).width();
-  });
+  // window.addEventListener("scroll", function () {
+  //   // scale up hero section until scale is 20x
+  //   // and fade out hero title
+  //   let scale = 1 + window.scrollY / 25;
+  //   let opacity = 100 - window.scrollY * 1.5;
 
-  if (windowSize > 767) {
-    var controller = new ScrollMagic.Controller();
-
-    var zoomHeader = TweenMax.to("#header", 0.5, {
-      scale: 22,
-      ease: Circ.EaseIn,
-    });
-
-    var zoomOne = TweenMax.to("#one", 0.5, { scale: 100, ease: Circ.EaseIn });
-    var zoomTwo = TweenMax.to("#two", 0.5, { scale: 100, ease: Circ.EaseIn });
-    var zoomThree = TweenMax.to("#three", 0.5, {
-      scale: 100,
-      ease: Circ.EaseIn,
-    });
-    var zoomFour = TweenMax.to("#four", 0.5, { scale: 6, ease: Circ.EaseIn });
-
-    var headerZoom = new ScrollMagic.Scene({
-      triggerElement: "#header",
-      triggerHook: 0,
-      duration: "300%",
-    })
-      .setPin("#header")
-      .setClassToggle("#header", "showing")
-      .setTween(zoomHeader)
-      // .addIndicators({name: 'header zoom'})
-      .addTo(controller);
-
-    var sceneOneZoom = new ScrollMagic.Scene({
-      triggerElement: "#one",
-      triggerHook: 0,
-      duration: "300%",
-    })
-      .setPin("#one")
-      .setClassToggle("#one", "showing")
-      .setTween(zoomOne)
-      // .addIndicators({name: 'Scene 1 zoom'})
-      .addTo(controller);
-
-    var sceneTwoZoom = new ScrollMagic.Scene({
-      triggerElement: "#two",
-      triggerHook: 0,
-      duration: "300%",
-    })
-      .setPin("#two")
-      .setClassToggle("#two", "showing")
-      .setTween(zoomTwo)
-      // .addIndicators({name: 'Scene 2 zoom', indent: 400})
-      .addTo(controller);
-
-    var sceneThreeZoom = new ScrollMagic.Scene({
-      triggerElement: "#three",
-      triggerHook: 0,
-      duration: "300%",
-    })
-      .setPin("#three")
-      .setClassToggle("#three", "showing")
-      .setTween(zoomThree)
-      // .addIndicators({name: 'Scene 3 zoom', indent: 800})
-      .addTo(controller);
-
-    var sceneFourZoom = new ScrollMagic.Scene({
-      triggerElement: "#four",
-      triggerHook: 0,
-      duration: "100%",
-    })
-      .setPin("#four")
-      .setClassToggle("#four", "showing")
-      .setTween(zoomFour)
-      //.addIndicators({name: 'Scene 4 zoom'})
-      .addTo(controller);
-  }
-
-  var documentHeight = document.body.clientHeight;
-  var windowHeight = $(window).height() * 1.5;
-  var bottomPoint = documentHeight - windowHeight;
-
-  $(window).scroll(function () {
-    var scrollTop = $(window).scrollTop();
-
-    if (scrollTop > bottomPoint) {
-      $("#four a").addClass("email-showing");
-    } else {
-      $("#four a").removeClass("email-showing");
-    }
-  });
-
-  const ScrolMag = React.createClass({
-    render: function () {
-      return (
-        <div>
-          <header id="header" className="showing">
-            <h1>
-              <span className="name">Laura Salgado</span>{" "}
-              <span className="title">Front-end Developer</span>
-            </h1>
-          </header>
-          <main>
-            <ul>
-              <li id="one">
-                <a href="https://codepen.io/lauraculham/" target="_blank">
-                  Codepen
-                </a>
-              </li>
-              <li id="two">
-                <a href="#" target="_blank">
-                  LinkedIn
-                </a>
-              </li>
-              <li id="three">
-                <a href="#" target="_blank">
-                  Twitter
-                </a>
-              </li>
-              <li id="four">
-                <a href="#">
-                  culham.laura
-                  <span>
-                    @gmail.com
-                    <span />
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </main>
+  //   if (scale < 20) {
+  //     hero.style.transform = `scale(${scale})`;
+  //     heroTitle.style.opacity = opacity * 0.01;
+  //   }
+  //   // toggle threshold class at threshold value
+  //   window.scrollY > threshold
+  //   ? document.body.classList.add("past-threshold")
+  //   : document.body.classList.remove("past-threshold");
+  // });
+  const hero = useRef(null);
+  const heroTitle = useRef(null);
+  return (
+    <div>
+      {/* <header className="hero" style={{ transform: "scale(1)" }}>
+        <div className="hero__top">
+          <div className="filler filler-white" />
+          <div className="hero__illustration">
+            <div className="filler filler-white" />
+            <div className="hero-icon" />
+            <div className="filler filler-white" />
+          </div>
+          <div className="filler filler-white" />
         </div>
-      );
-    },
-  });
+        <div className="hero__bottom">
+          <h1>The future is here.</h1>
+        </div>
+      </header>
+      <div className="trailer">
+        <div className="video-wrapper">
+          <div className="video" />
+        </div>
+      </div>
+      <main className="content">
+        <section className="section">
+          <h2>Really</h2>
+        </section>
+        <section className="section">
+          <h2>sweet</h2>
+        </section>
+        <section className="section">
+          <h2>scroll</h2>
+        </section>
+        <section className="section">
+          <h2>effect.</h2>
+          <p>Inspired by Framer's homepage.</p>
+        </section>
+      </main> */}
+    </div>
+  );
 };
 
 export default ScrolMag;
