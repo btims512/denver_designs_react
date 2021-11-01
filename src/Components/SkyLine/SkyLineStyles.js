@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
 export const SkyLineStyles = styled.div`
-  .denver-parallax {
-    background-color: rgb(17, 17, 21);
-  }
-
   .parallax {
     perspective: 1px;
     perspective-origin: center;
@@ -22,7 +18,7 @@ export const SkyLineStyles = styled.div`
 
   .parallax .layer {
     position: absolute;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
   }
 
@@ -93,6 +89,7 @@ export const SkyLineStyles = styled.div`
     background-color: #111115;
     width: 100vw;
     height: 100vh;
+
   }
 
   .site_name {

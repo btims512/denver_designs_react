@@ -1,16 +1,4 @@
-.Parallax__background {
+html {
   width: 100vw;
-  background-color: rgb(17, 17, 21)
-}
-
-.Parallax {
-  background-color: rgb(17, 17, 21);
-  font-family: 'Cedarville Cursive', cursive;
-}
-
-@font-face {
-  font-family: "selima";
-  src: local("selima_.otf"),
-    url("./fonts//selima/selima_.otf") format("truetype");
-  font-weight: bold;
+  overflow: scroll;
 }

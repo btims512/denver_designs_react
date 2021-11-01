@@ -22,12 +22,20 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100vw;
   min-height: 100vh;
-  min-height: 28rem;
+  min-height: 20rem;
   background-blend-mode: soft-light;
   background-size: cover;
   background-position: center center;
   padding: 2rem;
+}
+
+.header-img {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 25vh;
 }
 
 .bird {
@@ -64,7 +72,7 @@ h1 {
 }
 
 .bird-container {
-  position: absolute;
+  position: fixed;
   top: 20%;
   left: -10%;
   transform: scale(0) translateX(-10vw);
